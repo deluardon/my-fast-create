@@ -1,0 +1,46 @@
+.header, .nav, .main, .aside, .down{
+    background-color: chartreuse;
+    border: 2px solid tomato;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+}
+.header{
+    grid-area: header;
+}
+
+.nav{
+    grid-area: nav;
+}
+
+.main{
+    grid-area: main;
+}
+
+.aside{
+    grid-area: aside;
+}
+
+.down{
+    grid-area: down;
+}
+.container{
+    display: grid;
+    grid-template-areas: 
+    "header  header header header"
+    "nav     main    main  slid-bar"
+    "down     down     down  down"
+    
+    ;
+}
+@media screen and (max-width:460px) {
+    .container {
+        grid-template-areas: 
+        ".header"
+        "nav"
+        "main"
+        "slid-bar"
+        "down"
+        ;
+}
+}
